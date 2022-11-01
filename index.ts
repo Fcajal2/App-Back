@@ -6,18 +6,26 @@ app.use(cors());
 
 app.use(express.json());
 
-const products: { id: number; name: string; brand: string; price: number }[] = [
+const products: {
+  id: number;
+  name: string;
+  brand: string;
+  price: number;
+  isEditing?: boolean;
+}[] = [
   {
     name: "Teclado",
     brand: "Logitech",
     price: 12,
     id: 2131231,
+    isEditing: false,
   },
   {
     name: "Placa",
     brand: "AMD",
     price: 15,
     id: 21312312,
+    isEditing: false,
   },
 ];
 
